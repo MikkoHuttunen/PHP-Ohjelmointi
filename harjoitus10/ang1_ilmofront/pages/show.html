@@ -1,0 +1,29 @@
+<!-- show.html -->
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Ilmoittautuneet</strong></div>
+    <div class="panel-body">
+
+        <div class="table-responsive">          
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nimi</th>
+                        <th>Email</th>
+                        <th>Ruokavalinta</th>
+                        <th>Saunailta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     <tr ng-repeat="x in ilmot">
+                        <td>{{x.id}}</td>
+                        <td>{{x.nimi}}</td>
+                        <td>{{ x.email}}</td>
+                        <td>{{ x.ruoka}}</td>
+                        <td>{{ x.sauna}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

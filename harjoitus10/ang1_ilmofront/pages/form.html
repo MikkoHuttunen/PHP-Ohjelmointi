@@ -1,0 +1,32 @@
+<!-- form.html ilmo-sovelluksen Angular-frontendistä-->
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Ilmoittautumislomake</strong></div>
+    <div class="panel-body">
+        <form name="ilmoForm" role="form">
+            <div class="form-group">
+                <label for="nimi">Nimi:</label>
+                <!--namePattern saadaan kontrollerista: $scope.namePattern = /^([a-öA-Ö ,.'-]{3,50})$/; -->
+                <input type="text" ng-pattern="namePattern" class="form-control" name="nimi" id="nimi" placeholder="nimi" ng-model="formdata.nimi" required>
+                <!-- span sisältö näytetään vain kun ng-show -ehto täyttyy -->
+                <span class="text-danger" ng-show="ilmoForm.nimi.$touched && ilmoForm.nimi.$invalid">Nimi on virheellinen tai puuttuu<br/></span>    
+                <label for="email">Email:</label>
+                <!--emailPattern saadaan kontrollerista: $scope.emailPattern = /^([a-zA-Z0-9])+([a-zA-Z0-9._%+-])+@([a-zA-Z0-9_.-])+\.(([a-zA-Z]){2,6})$/; -->
+                <input type="email" ng-pattern="emailPattern" class="form-control" name="email" id="email" placeholder="email" ng-model="formdata.email" required>
+                <!-- span sisältö näytetään vain kun ng-show -ehto täyttyy -->
+                <span class="text-danger" ng-show="ilmoForm.email.$touched && ilmoForm.email.$invalid">Email on virheellinen tai puuttuu<br/></span>
+                <label for="ruoka">Ruokavalinta:</label>
+                <select class="form-control" id="ruoka" ng-model="formdata.ruoka">
+                    <option>Kala</option>
+                    <option>Liha</option>
+                    <option>Kasvis</option>
+                </select>
+                <div class="checkbox">
+                <label><input type="checkbox" ng-model="formdata.sauna"> Osallistun saunailtaan</label>
+                </div>
+                <!--input type="hidden" ng-model="formdata.id" /-->
+            </div>
+            <!--Nappi disabloitu niin kauan kunnes lähetetään validia dataa -->
+            <button type="submit" class="btn btn-default" ng-click="create()" ng-disabled="ilmoForm.$invalid">Lähetä</button>
+        </form>
+    </div>
+</div>
