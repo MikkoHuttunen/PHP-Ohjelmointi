@@ -1,0 +1,23 @@
+1. Latasin CodeIgniter 2.2.6 ja laitoin tiedostot Apache serverilleni localhostiin.
+
+2. Korjasin baseurl osoitteet sellaisiksi että CodeIgniter toimi serverilläni.
+
+3. Muutin tietokantaan yhteydenotto tiedot sopiviksi database.php:sta jotta sain yhteyden 'phpkurssi' kantaan oikeilla tunnuksilla.
+
+4. Lisäsin tietokannat autoloadiin 'autoload.php' tiedostossa jotta niitä ei tarvitse latailla aina erikseen.
+
+5. Muutin oletus controllerin omaan controlleriin 'routes.php' tiedostossa jotta se avautuu heti localhostissa tervehdyksen sijasta.
+
+6. Loin taulukon 'data' kurssia varten tekemääni 'phpkurssi' tietokantaan.
+
+7. Loin mallin joka sisältää tietokantahakemiseen liittyvän koodin. Mallit ovat kätevä tapa tallettaa paljon käytetty koodi yhteen paikkaan ja kutsua sitä sieltä.
+
+8. Tein kontrollerin joka lataa mallit ja lisää ne verkkosivulle.
+
+9. Tein 'phpkurssi_view.php' joka näyttää käyttäjälle verkkosivun ja sen sisällön.
+
+10. Lisäsin sivulle kalenterin. Luokkien lisääminen CI:ssä tapahtuu lisäämällä ensin konstruktorimetodi kontrolleriin jonka jälkeen se lisätään viewiin jotta käyttäjä näkee sen.
+
+11. Lisäsin sivulle toisen sivun käyttäen apureita(helpers). Uusi sivu lisättiin lisäämällä funktio controlleriin ja sen jälkeen linkki viewiin. Lisäsin uudelle sivulle linkin joka vie takaisin etusivulle.
+
+12. Mahdollisien tyylitiedostojen lisäämiseksi loin roottiin vielä 'assets' kansion jonne tein 'styles.css' -tiedoston.
