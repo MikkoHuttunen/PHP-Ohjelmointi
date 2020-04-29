@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS testdb;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id int(99) NOT NULL AUTO_INCREMENT,
+    name varchar(50) DEFAULT NULL,
+    age int(99) NOT NULL DEFAULT 0,
+    email varchar(50) DEFAULT NULL,
+    position varchar(50) DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0;
+
+INSERT INTO employees (name, age, email, position)
+VALUES 
+    ('John Thompson', 30, 'jthompson@email.com', 'office'),
+    ('Margaret Myers', 37, 'mmyers@email.com', 'reception'),
+    ('Walter Black', 42, 'wblack@email.com', 'tech support'),
+    ('Adam Smith', 33, 'asmith@email.com', 'manager');
