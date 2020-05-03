@@ -1,4 +1,5 @@
 <?php
+    //Olio joka taltioi käyttäjän sovelluksessa valitseman tietokannan ja taulukon.
     class Data {
         public $database;
         public $table;
