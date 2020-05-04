@@ -2,7 +2,7 @@
     //query.php:n tarkoitus on antaa käyttäjälle mahdollisuus tehdä kyselyitä valitsemaansa tietokantaan
     session_start();
     include 'backend/connection.php';
-    include 'backend/database.php';
+    include 'data_object.php';
 
     //Luodaan uusi tietokanta jos käyttäjä päätti tehdä sellaisen index.php:ssa sijaitsevan lomakkeen kautta 
     if ($_POST['dbname']) {

@@ -1,4 +1,4 @@
-DBViewer 1.0
+DBViewer
 
 Simple database viewer which helps you view your local databases and edit them.
 

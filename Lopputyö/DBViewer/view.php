@@ -3,7 +3,7 @@
 
     //Sisällytetään yhteys sekä olio johon on tallennettu käyttäjän valitsema tietokanta ja sen taulu
     include 'backend/connection.php';
-    include 'backend/database.php';
+    include 'data_object.php';
     session_start();
 
     //Asetetaan tietokanta ja taulukko session muuttujiin
